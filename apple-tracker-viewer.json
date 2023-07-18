@@ -16,7 +16,7 @@
   },
   "tutorialVideos": [],
   "title": "AppleTracker",
-  "icon": "TODO",
+  "icon": "https://raw.githubusercontent.com/hestiaAI/hestialabs-experiences/master/packages/lib/icons/apple.png",
   "subtitle": "Tracking data",
   "viewBlocks": [
     {
