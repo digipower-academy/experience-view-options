@@ -15,7 +15,13 @@
       "visualization": "ChartViewDashboard.vue",
       "vizProps": {
         "graphs": [
-          
+          {
+            "title": "Content viewed",
+            "valueLabel": "views",
+            "cols": "12",
+            "type": "TimelineChart.vue",
+            "dateAccessor": "actionDate"
+          },          
           {
             "valueLabel": "interactions",
             "title": "Type of content",
