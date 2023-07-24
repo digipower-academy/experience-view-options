@@ -14,7 +14,8 @@
       "files": ["postsViewed", "videosWatched", "adsViewed"],
       "visualization": "ChartViewDashboard.vue",
       "vizProps": {
-        "graphs": [
+        "graphs": [ 
+          
           {
             "title": "Content viewed",
             "valueLabel": "views",
