@@ -14,14 +14,15 @@
       "files": ["postsViewed", "videosWatched", "adsViewed"],
       "visualization": "ChartViewDashboard.vue",
       "vizProps": {
-        "graphs": [
+        "graphs": [ 
+          
           {
             "title": "Content viewed",
             "valueLabel": "views",
             "cols": "12",
             "type": "TimelineChart.vue",
             "dateAccessor": "actionDate"
-          },
+          },          
           {
             "valueLabel": "interactions",
             "title": "Type of content",
