@@ -23,10 +23,8 @@
     {
       "showTable": false,
       "id": "IOSNetwork",
-      "sql": "SELECT\r\n  *\r\nFROM\r\n  NetworkActivityIOS;\r\n",
-      "files": [
-        "tracker-control-ios"
-      ],
+      "sql": "SELECT * FROM NetworkActivityIOS; ",
+      "files": ["tracker-control-ios"],
       "visualization": "ChartViewIOSNetworkActivity.vue",
       "title": "Network Activity",
       "text": "Explore every connection made by your applications to a particular domain. The result is limited to the last two weeks since you activated the App Privacy Report."
@@ -34,10 +32,8 @@
     {
       "showTable": false,
       "id": "IOSAccess",
-      "sql": "SELECT\r\n  *\r\nFROM\r\n  ResourceAccessIOS\r\nGROUP BY\r\n  identifier;\r\n",
-      "files": [
-        "tracker-control-ios"
-      ],
+      "sql": "SELECT * FROM ResourceAccessIOS GROUP BY identifier; ",
+      "files": ["tracker-control-ios"],
       "visualization": "ChartViewIOSAccess.vue",
       "title": "Resource Access",
       "text": "Explore every access your apps have made to a resource on your device. The result is limited to the last two weeks since you activated the App Privacy Report."
