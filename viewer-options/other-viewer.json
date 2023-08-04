@@ -1,1 +1,21 @@
-Couldn't find the requested file /src/other-viewer.json in @hestia.ai/twitter.
+{
+  "dataSamples": [],
+  "hideEmptyTabs": false,
+  "hideFileExplorer": true,
+  "hideSummary": true,
+  "messages": {
+    "en": {
+      "viewBlocks": {}
+    },
+    "fr": {
+      "viewBlocks": {}
+    }
+  },
+  "tutorialVideos": [],
+  "url": "mailto:contact@hestialabs.org",
+  "title": "More to come",
+  "icon": "https://raw.githubusercontent.com/hestiaAI/hestialabs-experiences/master/packages/lib/icons/help.png",
+  "subtitle": "Contact us for specific needs",
+  "viewBlocks": [],
+  "version": 1
+}

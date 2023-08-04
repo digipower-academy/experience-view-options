@@ -32,16 +32,31 @@ const experiences = [
 ]
 
 function viewerOptsUrl (experienceName) {
-  return `https://cdn.jsdelivr.net/npm/@hestia.ai/twitter/src/${experienceName}-viewer.json`
+  return `https://cdn.jsdelivr.net/npm/@hestia.ai/${experienceName}/src/${experienceName}-viewer.json`
 }
 
 // thanks bingai
 function downloadFile(url, destinationDir) {
+  console.log('Get', url)
   const fileName = path.basename(url)
   const filePath = path.join(destinationDir, fileName)
   const file = fs.createWriteStream(filePath)
-  https.get(url, (response) => response.pipe(file))
-  console.log('wrote ', filePath)
+  https.get(url, (response) => {
+    if (response.statusCode !== 200) {
+      console.error(`Failed to download file ${url}\nstatus: ${response.statusCode}`);
+      return;
+    }
+    response.pipe(file);
+    file.on('finish', () => {
+      file.close(() => {
+        console.log(`File ${url}\ndownloaded to ${filePath}`);
+      });
+    });
+  }).on('error', (err) => {
+    fs.unlink(filePath, () => {
+      console.error(`Failed to download file ${url}\nmessage: ${err.message}`);
+    });
+  });
 }
 
 function main() {
