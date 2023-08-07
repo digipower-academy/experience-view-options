@@ -41,6 +41,32 @@
             ]
           }
         },
+        "overview-last-month": {
+          "title": "Advertising overview (last month)",
+          "text": "Understand who targeted you with Twitter ads last month, how much, and why, in this interactive visualization. Click on any graph to filter the results.",
+          "vizProps": {
+            "graphs": [
+              {
+                "title": "Number of ads printed",
+                "valueLabel": "ads"
+              },
+              {
+                "title": "Top Advertisers",
+                "valueLabel": "ads"
+              },
+              {
+                "title": "Interactions with ads (clicks, video views)",
+                "valueLabel": "ads"
+              },
+              {
+                "valueLabel": "ads"
+              },
+              {
+                "valueLabel": "ads"
+              }
+            ]
+          }
+        },
         "targeting": {
           "title": "Targeting Criteria",
           "text": "Find which criteria are used to target this group of person.",
@@ -153,48 +179,6 @@
       "id": "overview",
       "sql": "SELECT * FROM TwitterAd; ",
       "files": ["ads"],
-      "visualization": "ChartViewDashboard.vue",
-      "vizProps": {
-        "graphs": [
-          {
-            "title": "Number of ads printed",
-            "valueLabel": "ads",
-            "cols": "8",
-            "type": "TimelineChart.vue",
-            "dateAccessor": "impressionDate"
-          },
-          {
-            "title": "Top Advertisers",
-            "cols": "4",
-            "type": "TopChart.vue",
-            "valueAccessor": "companyName"
-          },
-          {
-            "title": "Interactions with ads (clicks, video views)",
-            "cols": "4",
-            "type": "PieChart.vue",
-            "valueAccessor": "engagedWith"
-          },
-          {
-            "type": "HourChart.vue",
-            "cols": "4",
-            "dateAccessor": "impressionDate"
-          },
-          {
-            "type": "WeekChart.vue",
-            "cols": "4",
-            "dateAccessor": "impressionDate"
-          }
-        ]
-      },
-      "title": "Advertising overview",
-      "text": "Understand how much, who and why you are being targeted by Twitter ads in this interactive visualization. Click on any graph to filter the results."
-    },
-    {
-      "showTable": false,
-      "id": "overview-last-month",
-      "sql": "SELECT * FROM TwitterAdLastMonth; ",
-      "files": ["adsLastMonth"],
       "visualization": "ChartViewDashboard.vue",
       "vizProps": {
         "graphs": [
